@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -35,13 +36,13 @@ public class Entity {
     boolean isSelected;
     String customSelect;
     byte[] customFile;
+    Set<InnerEntity> innerEntitySet;
 
     Date event_startDate;
     Date event_endDate;
     Date session_startDate;
     Date session_endDate;
-    
-    
+
     public String getEmail() {
         return email;
     }
@@ -186,6 +187,14 @@ public class Entity {
         this.customFile = customFile;
     }
 
+    public Set<InnerEntity> getInnerEntitySet() {
+        return innerEntitySet;
+    }
+
+    public void setInnerEntitySet(Set<InnerEntity> innerEntitySet) {
+        this.innerEntitySet = innerEntitySet;
+    }
+
     public Date getEvent_startDate() {
         return event_startDate;
     }
@@ -217,5 +226,5 @@ public class Entity {
     public void setSession_endDate(Date session_endDate) {
         this.session_endDate = session_endDate;
     }
-    
+
 }

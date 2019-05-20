@@ -151,6 +151,23 @@
                     <form:errors path="checkbox"/>
                 </fieldset>
 
+
+
+
+                multivalue part
+                <div id="inputsWrapper">
+                    <div><input type="text" path="innerEntitySet[0].value" id="field_1" value=""/><a href="#" class="removeclass"></a></div>
+                </div>
+                <div id="addMoreFileId">
+                    <a href="#" id="addMoreFileBox" class="btn btn-info">Add field</a><br><br>
+                </div>
+                <div id="lineBreak"></div>
+
+                multivalue part
+
+                -->
+
+
                 <div class="form-group">
                     <fieldset disabled="">
                         <label class="control-label" for="disabledInput">Disabled input</label>
@@ -242,7 +259,7 @@
         </form:form>
 
 
-
+        <script><%@include file="/WEB-INF/js/multivalue.js"%></script>
 
     </div>
 </div>
