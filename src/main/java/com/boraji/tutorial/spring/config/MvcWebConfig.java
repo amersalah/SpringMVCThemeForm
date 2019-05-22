@@ -10,6 +10,8 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.http.CacheControl;
 import org.springframework.ui.context.ThemeSource;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ThemeResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -87,4 +89,8 @@ public class MvcWebConfig implements WebMvcConfigurer {
         return tilesConfigurer;
     }
    
+    @Bean
+    public MultipartResolver multipartResolver() {
+        return new StandardServletMultipartResolver();
+    }
 }
